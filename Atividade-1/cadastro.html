@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><title>Cadastro</title><link rel='stylesheet' href='css/tokens.css'><link rel='stylesheet' href='css/style.css'></head><body>
+<header class="site-header">
+  <div class="container navbar">
+    <strong>ONG Conecta</strong>
+    <label for="nav-toggle" class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></label>
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <div class="dropdown-menu" role="menu" aria-label="submenu">
+            <a href="projetos.html#educacao">Educação</a>
+            <a href="projetos.html#saude">Saúde</a>
+            <a href="projetos.html#meio-ambiente">Meio Ambiente</a>
+          </div>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class='container'><h2>Cadastro de Voluntários</h2><form id='formA1' class='form' novalidate><div class='grid'><div><label>Nome Completo</label><input type='text' name='nome' required></div><div><label>E-mail</label><input type='email' name='email' required></div><div><label>CPF</label><input type='text' name='cpf' required placeholder='000.000.000-00'></div><div><label>Telefone</label><input type='tel' name='telefone' required placeholder='(11) 99999-0000'></div><div><label>Data de Nascimento</label><input type='date' name='nascimento' required></div><div><label>CEP</label><input type='text' name='cep' required placeholder='00000-000'></div><div><label>Cidade</label><input type='text' name='cidade' required></div><div><label>Estado</label><input type='text' name='estado' required></div></div><p><button class='btn primary' type='submit'>Enviar</button></p></form></main><footer class='container'><small>© ONG Conecta</small></footer><script>(function(){function mask(v,p){let i=0;const d=(v||'').replace(/\D/g,'');return p.replace(/#/g,_=>d[i++]||'');}const f=document.getElementById('formA1');if(!f)return;const cpf=f.querySelector('[name="cpf"]'),tel=f.querySelector('[name="telefone"]'),cep=f.querySelector('[name="cep"]');if(cpf)cpf.addEventListener('input',e=>e.target.value=mask(e.target.value,'###.###.###-##'));if(tel)tel.addEventListener('input',e=>{const o=e.target.value.replace(/\D/g,'');e.target.value=mask(e.target.value,o.length>10?'(##) #####-####':'(##) ####-####');});if(cep)cep.addEventListener('input',e=>e.target.value=mask(e.target.value,'#####-###'));})();</script></body></html>
